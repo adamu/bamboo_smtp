@@ -5,8 +5,8 @@
 [![Module Version](https://img.shields.io/hexpm/v/bamboo_smtp.svg)](https://hex.pm/packages/bamboo_smtp)
 [![Hex Docs](https://img.shields.io/badge/hex-docs-lightgreen.svg)](https://hexdocs.pm/bamboo_smtp/)
 [![Total Download](https://img.shields.io/hexpm/dt/bamboo_smtp.svg)](https://hex.pm/packages/bamboo_smtp)
-[![License](https://img.shields.io/hexpm/l/bamboo_smtp.svg)](https://github.com/fewlinesco/bamboo_smtp/blob/master/LICENSE)
-[![Last Updated](https://img.shields.io/github/last-commit/fewlinesco/bamboo_smtp.svg)](https://github.com/fewlinesco/bamboo_smtp/commits/master)
+[![License](https://img.shields.io/hexpm/l/bamboo_smtp.svg)](https://github.com/fewlinesco/bamboo_smtp/blob/main/LICENSE)
+[![Last Updated](https://img.shields.io/github/last-commit/fewlinesco/bamboo_smtp.svg)](https://github.com/fewlinesco/bamboo_smtp/commits/main)
 
 An adapter for the [Bamboo](https://github.com/thoughtbot/bamboo) email app.
 
@@ -18,19 +18,11 @@ The package can be installed as:
 
    ```elixir
    def deps do
-     [{:bamboo_smtp, "~> 4.1.0"}]
+     [{:bamboo_smtp, "~> 4.2.1"}]
    end
    ```
 
-2. Add `:bamboo` and `:bamboo_smtp` to your list of applications in `mix.exs`:
-
-   ```elixir
-   def application do
-     [applications: [:bamboo, :bamboo_smtp]]
-   end
-   ```
-
-3. Setup your SMTP configuration:
+2. Setup your SMTP configuration:
 
    ```elixir
    # In your config/config.exs file
@@ -60,9 +52,9 @@ The package can be installed as:
 
    The *hostname* option sets the FQDN to the header of your emails, its optional, but if you don't set it, the underlying `gen_smtp` module will use the hostname of your machine, like `localhost`.
 
-4. Follow Bamboo [Getting Started Guide](https://github.com/thoughtbot/bamboo#getting-started)
+3. Follow Bamboo [Getting Started Guide](https://github.com/thoughtbot/bamboo#getting-started)
 
-5. **Optional** Set `BambooSMTP.TestAdapter` as your test adapter:
+4. **Optional** Set `BambooSMTP.TestAdapter` as your test adapter:
 
    ```elixir
    # In your config/config.exs file

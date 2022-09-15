@@ -2,7 +2,7 @@ defmodule BambooSmtp.Mixfile do
   use Mix.Project
 
   @project_url "https://github.com/fewlinesco/bamboo_smtp"
-  @version "4.2.1"
+  @version "4.2.2"
 
   def project do
     [
@@ -37,18 +37,9 @@ defmodule BambooSmtp.Mixfile do
       {:excoveralls, "~> 0.14.0", only: :test},
 
       # doc
-      {:earmark, ">= 1.3.2", only: :docs},
-      {:ex_doc, ex_doc_version(), only: :docs},
+      {:ex_doc, "~> 0.28.4", only: :docs},
       {:inch_ex, "~> 2.0.0", only: :docs}
     ]
-  end
-
-  defp ex_doc_version do
-    if Version.match?(System.version(), "~> 1.7") do
-      "~> 0.24.0"
-    else
-      "~> 0.18.4"
-    end
   end
 
   defp package do
@@ -56,7 +47,7 @@ defmodule BambooSmtp.Mixfile do
       maintainers: ["Kevin Disneur", "Thomas Gautier"],
       licenses: ["MIT"],
       links: %{
-        "Changelog" => "#{@project_url}/blob/master/CHANGELOG.md",
+        "Changelog" => "#{@project_url}/blob/main/CHANGELOG.md",
         "GitHub" => @project_url
       }
     ]
